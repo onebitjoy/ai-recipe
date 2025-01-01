@@ -1,0 +1,40 @@
+/* default css */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: "Lato", serif;
+  background-color: whitesmoke;
+}
+
+/* header */
+.header {
+  font-family: "Dancing Script", serif;
+  background-color: white;
+  color: #171819;
+  font-size: 1rem;
+  box-shadow: 5px 2px 5px #d4d4d4;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.logo {
+  width: 2em;
+  height: 2em;
+}
+
+.title {
+}
