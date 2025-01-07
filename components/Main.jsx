@@ -34,7 +34,7 @@ export default function Main() {
         </form>
       </div>
 
-      {ingredients?.length !== 0 && (
+      {ingredients?.length !== 0 ? (
         <>
           <div className="ingredients-list">
             <h2 className="list-heading">Ingredients List:</h2>
@@ -65,6 +65,8 @@ export default function Main() {
             </div>
           </div>
         </>
+      ) : (
+        <></>
       )}
     </main>
   );
