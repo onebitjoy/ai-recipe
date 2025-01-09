@@ -174,3 +174,16 @@ body {
     font-size: 1.2em;
   }
 }
+
+/* suggested-recipe-container */
+
+.suggested-recipe-container {
+  width:800px;
+  margin: 32px;
+  padding:1em;
+  color:#475467;
+  line-height: 28px;
+  font-size: 1.125rem;
+  font-weight:400;
+  height:fit-content;
+}

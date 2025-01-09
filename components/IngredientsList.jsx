@@ -1,4 +1,8 @@
-export default function IngredientsList({ ingredients, handleRecipe }) {
+export default function IngredientsList({
+  ingredients,
+  handleRecipe,
+  isRecipeBtnDisabled,
+}) {
   return ingredients.length !== 0 ? (
     <>
       <div className="ingredients-list">
@@ -21,7 +25,7 @@ export default function IngredientsList({ ingredients, handleRecipe }) {
         <div className="right">
           <div className="get-recipe-btn">
             <button
-              disabled={ingredients.length === 0}
+              disabled={ingredients.length === 0 || isRecipeBtnDisabled}
               onClick={() => handleRecipe(ingredients)}
             >
               Get a recipe

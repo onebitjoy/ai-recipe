@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useRef } from "react";
+
 import IngredientsForm from "./IngredientForm.jsx";
 import IngredientsList from "./IngredientsList.jsx";
 import RecipeFromAI from "./RecipeFromAI.jsx";
@@ -7,6 +9,8 @@ import getRecipeFromMistral from "../tools/ai.js";
 export default function Main() {
   const [ingredients, setIngredients] = useState([]);
   const [recipe, setRecipe] = useState("");
+
+  const recipeScrollRef = useRef(null);
 
   function handleIngredients(event) {
     event.preventDefault();
@@ -20,7 +24,6 @@ export default function Main() {
   }
 
   function handleRecipe(ingredients) {
-    console.log("Ingredients:", ingredients);
     getRecipe(ingredients);
   }
 
@@ -34,7 +37,7 @@ export default function Main() {
     <main className="main">
       <IngredientsForm handleIngredients={handleIngredients} />
       <IngredientsList ingredients={ingredients} handleRecipe={handleRecipe} />
-      <RecipeFromAI recipe={recipe} />
+      <RecipeFromAI recipe={recipe} recipeScrollRef={recipeScrollRef} />
     </main>
   );
 }
